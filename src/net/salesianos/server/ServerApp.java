@@ -11,7 +11,7 @@ import net.salesianos.server.threads.ClientHandler;
 import net.salesianos.utils.Constants;
 
 public class ServerApp {
-     public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         ServerSocket serverSocket = new ServerSocket(Constants.SERVER_PORT);
         System.out.println("Servidor levantado en el puerto " + serverSocket.getLocalPort());
 

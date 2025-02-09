@@ -19,12 +19,12 @@ public class ClientApp {
         DataInputStream clientInputStream = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
 
         serverMessage = clientInputStream.readUTF();
-        System.out.println(serverMessage + " que es teo es el nombre? ");
+        System.out.println(serverMessage);
         String name = scanner.nextLine();
         clientOutputStream.writeUTF(name);
         clientOutputStream.flush();
         serverMessage = clientInputStream.readUTF();
-        System.out.println(serverMessage + " esto que es");
+        System.out.println(serverMessage);
         String bet = scanner.nextLine();
         clientOutputStream.writeUTF(bet);
         clientOutputStream.flush();
@@ -32,7 +32,6 @@ public class ClientApp {
         if (bet.equals("no")) {
             System.out.println("fin del juego");
         } else {
-
             while (true) {
                 serverMessage = clientInputStream.readUTF();
                 System.out.println(serverMessage);
